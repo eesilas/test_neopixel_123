@@ -1,0 +1,13 @@
+basic.showIcon(IconNames.Angry)
+let strip = neopixel.create(DigitalPin.P1, 12, NeoPixelMode.RGB)
+strip.setBrightness(128)
+strip.clear()
+strip.showRainbow(1, 360)
+basic.forever(function () {
+    strip.showRainbow(1, 360)
+    basic.pause(200)
+    strip.showRainbow(1, 120)
+    basic.pause(200)
+    strip.showRainbow(121, 360)
+    basic.pause(200)
+})
